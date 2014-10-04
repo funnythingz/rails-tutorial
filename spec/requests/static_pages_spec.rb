@@ -4,6 +4,8 @@ RSpec.describe "StaticPages", :type => :request do
 
   describe "GET /static_pages" do
 
+    let(:base_title) {"Rails Tutorial"}
+
     describe "/home" do
       it "access to `/static_pages/home` responds successfully with an HTTP 200 status code" do
 
@@ -15,7 +17,7 @@ RSpec.describe "StaticPages", :type => :request do
 
       it "should have the title `Rails Tutorial | Home`" do
         visit "/static_pages/home"
-        expect(page).to have_title('Rails Tutorial | Home')
+        expect(page).to have_title("#{base_title} | Home")
       end
 
       it "should have the content `Home`" do
@@ -33,7 +35,7 @@ RSpec.describe "StaticPages", :type => :request do
 
       it "should have the title `Rails Tutorial | Help`" do
         visit "/static_pages/help"
-        expect(page).to have_title('Rails Tutorial | Help')
+        expect(page).to have_title("#{base_title} | Help")
       end
 
       it "should have the content `Help`" do
@@ -51,7 +53,7 @@ RSpec.describe "StaticPages", :type => :request do
 
       it "should have the title `Rails Tutorial | About me`" do
         visit "/static_pages/about"
-        expect(page).to have_title('Rails Tutorial | About me')
+        expect(page).to have_title("#{base_title} | About me")
       end
 
       it "should have the content `About me`" do
