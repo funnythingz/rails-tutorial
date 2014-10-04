@@ -18,6 +18,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
+  gem 'spork-rails'
 end
 
 group :test do
