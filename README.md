@@ -1,10 +1,16 @@
 # Rails Tutorial
 
-use
+## use
+
+### test
+
+- [rspec-rails](https://github.com/rspec/rspec-rails)
+- [capybara](https://github.com/jnicklas/capybara)
+
+### front-end
 
 - [typescript-rails](https://github.com/typescript-ruby/typescript-rails)
 - [slim](https://github.com/slim-template/slim-rails)
-
 
 ## setup
 
