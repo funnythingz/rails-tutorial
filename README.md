@@ -32,3 +32,11 @@ get *.d.ts in `app/assets/typings`
 % cd app/assets/
 % tsd query jquery -a -s install
 ```
+
+## Test
+
+auto Test
+
+```
+% guard
+```
