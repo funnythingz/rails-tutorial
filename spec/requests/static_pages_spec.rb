@@ -13,9 +13,13 @@ RSpec.describe "StaticPages", :type => :request do
 
       end
 
-      it "should have the content `Home`" do
+      it "should have the title `Rails Tutorial | Home`" do
         visit "/static_pages/home"
         expect(page).to have_title('Rails Tutorial | Home')
+      end
+
+      it "should have the content `Home`" do
+        visit "/static_pages/home"
         expect(page).to have_content('Home')
       end
     end
@@ -27,9 +31,13 @@ RSpec.describe "StaticPages", :type => :request do
         expect(response).to have_http_status(200)
       end
 
-      it "should have the content `Help`" do
+      it "should have the title `Rails Tutorial | Help`" do
         visit "/static_pages/help"
         expect(page).to have_title('Rails Tutorial | Help')
+      end
+
+      it "should have the content `Help`" do
+        visit "/static_pages/help"
         expect(page).to have_content('Help')
       end
     end
@@ -41,9 +49,13 @@ RSpec.describe "StaticPages", :type => :request do
         expect(response).to have_http_status(200)
       end
 
-      it "should have the content `About me`" do
+      it "should have the title `Rails Tutorial | About me`" do
         visit "/static_pages/about"
         expect(page).to have_title('Rails Tutorial | About me')
+      end
+
+      it "should have the content `About me`" do
+        visit "/static_pages/about"
         expect(page).to have_content('About me')
       end
     end
