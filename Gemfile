@@ -18,14 +18,16 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'capistrano-rails'
+  gem 'spork-rails'
 end
 
 group :test do
   gem 'selenium-webdriver'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'capistrano-rails'
 end
 
 group :production do
