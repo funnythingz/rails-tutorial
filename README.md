@@ -1,6 +1,6 @@
 # Rails Tutorial
 
-## use
+## Gems
 
 ### test
 
