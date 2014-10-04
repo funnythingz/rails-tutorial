@@ -15,6 +15,7 @@ RSpec.describe "StaticPages", :type => :request do
 
       it "should have the content `Home`" do
         visit "/static_pages/home"
+        expect(page).to have_title('Rails Tutorial | Home')
         expect(page).to have_content('Home')
       end
     end
@@ -28,6 +29,7 @@ RSpec.describe "StaticPages", :type => :request do
 
       it "should have the content `Help`" do
         visit "/static_pages/help"
+        expect(page).to have_title('Rails Tutorial | Help')
         expect(page).to have_content('Help')
       end
     end
@@ -41,6 +43,7 @@ RSpec.describe "StaticPages", :type => :request do
 
       it "should have the content `About me`" do
         visit "/static_pages/about"
+        expect(page).to have_title('Rails Tutorial | About me')
         expect(page).to have_content('About me')
       end
     end
