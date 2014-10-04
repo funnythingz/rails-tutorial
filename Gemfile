@@ -19,13 +19,13 @@ group :development, :test do
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
   gem 'rspec-rails'
+  gem 'capybara'
   gem 'factory_girl_rails'
   gem 'capistrano-rails'
 end
 
 group :test do
   gem 'selenium-webdriver'
-  gem 'capybara'
 end
 
 group :production do
