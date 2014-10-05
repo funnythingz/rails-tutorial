@@ -9,73 +9,73 @@ RSpec.describe "StaticPages", :type => :request do
     describe "/home" do
       it "access to `/static_pages/` responds successfully with an HTTP 200 status code" do
 
-        get "/static_pages/"
+        get "/"
         expect(response).to be_success
         expect(response).to have_http_status(200)
 
       end
 
       it "should have the title `Rails Tutorial | Home`" do
-        visit "/static_pages/"
+        visit root_path
         expect(page).to have_title("#{base_title} | Home")
       end
 
       it "should have the content `Home`" do
-        visit "/static_pages/"
+        visit root_path
         expect(page).to have_content('Home')
       end
     end
 
     describe "/help" do
       it "access to `/static_pages/help` responds successfully with an HTTP 200 status code" do
-        get "/static_pages/help"
+        get "/help"
         expect(response).to be_success
         expect(response).to have_http_status(200)
       end
 
       it "should have the title `Rails Tutorial | Help`" do
-        visit "/static_pages/help"
+        visit help_path
         expect(page).to have_title("#{base_title} | Help")
       end
 
       it "should have the content `Help`" do
-        visit "/static_pages/help"
+        visit help_path
         expect(page).to have_content('Help')
       end
     end
 
     describe "/about" do
       it "access to `/static_pages/about` responds successfully with an HTTP 200 status code" do
-        get "/static_pages/about"
+        get "/about"
         expect(response).to be_success
         expect(response).to have_http_status(200)
       end
 
       it "should have the title `Rails Tutorial | About me`" do
-        visit "/static_pages/about"
+        visit about_path
         expect(page).to have_title("#{base_title} | About me")
       end
 
       it "should have the content `About me`" do
-        visit "/static_pages/about"
+        visit about_path
         expect(page).to have_content('About me')
       end
     end
 
     describe "/contact" do
       it "access to `/static_pages/contact` responds successfully with an HTTP 200 status code" do
-        get "/static_pages/contact"
+        get "/contact"
         expect(response).to be_success
         expect(response).to have_http_status(200)
       end
 
       it "should have the title `Rails Tutorial | Contact`" do
-        visit "/static_pages/contact"
+        visit contact_path
         expect(page).to have_title("#{base_title} | Contact")
       end
 
       it "should have the content `Contact`" do
-        visit "/static_pages/contact"
+        visit contact_path
         expect(page).to have_content('Contact')
       end
     end
