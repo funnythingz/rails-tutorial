@@ -62,6 +62,24 @@ RSpec.describe "StaticPages", :type => :request do
       end
     end
 
+    describe "/contact" do
+      it "access to `/static_pages/contact` responds successfully with an HTTP 200 status code" do
+        get "/static_pages/contact"
+        expect(response).to be_success
+        expect(response).to have_http_status(200)
+      end
+
+      it "should have the title `Rails Tutorial | Contact`" do
+        visit "/static_pages/contact"
+        expect(page).to have_title("#{base_title} | Contact")
+      end
+
+      it "should have the content `Contact`" do
+        visit "/static_pages/contact"
+        expect(page).to have_content('Contact')
+      end
+    end
+
   end
 
 end
