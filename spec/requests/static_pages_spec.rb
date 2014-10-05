@@ -7,21 +7,21 @@ RSpec.describe "StaticPages", :type => :request do
     let(:base_title) {"Rails Tutorial"}
 
     describe "/home" do
-      it "access to `/static_pages/home` responds successfully with an HTTP 200 status code" do
+      it "access to `/static_pages/` responds successfully with an HTTP 200 status code" do
 
-        get "/static_pages/home"
+        get "/static_pages/"
         expect(response).to be_success
         expect(response).to have_http_status(200)
 
       end
 
       it "should have the title `Rails Tutorial | Home`" do
-        visit "/static_pages/home"
+        visit "/static_pages/"
         expect(page).to have_title("#{base_title} | Home")
       end
 
       it "should have the content `Home`" do
-        visit "/static_pages/home"
+        visit "/static_pages/"
         expect(page).to have_content('Home')
       end
     end
