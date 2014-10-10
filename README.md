@@ -1,5 +1,7 @@
 # Rails Tutorial
 
+[Ruby on Rails Tutorial](http://railstutorial.jp/?version=4.0)
+
 ## Gems
 
 ### test
