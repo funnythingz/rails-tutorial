@@ -22,16 +22,15 @@ group :development, :test do
   gem 'spork-rails'
   gem 'factory_girl_rails'
   gem 'capistrano-rails'
-end
-
-group :development do
   gem 'guard-rspec'
   gem 'guard'
 end
 
+group :development do
+end
+
 group :test do
   gem 'selenium-webdriver'
-  gem 'guard-rspec'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'faker', '~> 1.1.2'
