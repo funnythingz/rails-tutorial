@@ -23,7 +23,6 @@ end
 
 group :test do
   gem 'selenium-webdriver'
-  gem 'guard-rspec'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
